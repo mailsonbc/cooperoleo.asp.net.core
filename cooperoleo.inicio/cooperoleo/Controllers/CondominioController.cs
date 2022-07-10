@@ -63,5 +63,128 @@ namespace cooperoleo.Controllers
         {            
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public IActionResult Editar(int id)
+        {
+            var condominioModel = new CondominioModel();
+            if(id == 1)
+            {
+                condominioModel = new CondominioModel()
+                {
+                    CondominioId = 1,
+                    Contato = "Antônio",
+                    Endereco = "Rua Um, 23",
+                    NomeCondominio = "Edifício Azaleia",
+                    ConteinerId = 1,
+                    Ativo = true
+                };
+            }
+            else if(id == 2)
+            {
+                condominioModel = new CondominioModel()
+                {
+                    CondominioId = 2,
+                    Contato = "Maria",
+                    Endereco = "Rua Dois, 203",
+                    NomeCondominio = "Edifício Rio de Janeiro",
+                    ConteinerId = 2,
+                    Ativo = true
+                };
+            }
+            else if(id == 3)
+            {
+                condominioModel = new CondominioModel()
+                {
+                    CondominioId = 3,
+                    Contato = "Pedro",
+                    Endereco = "Rua Pedro Álvares Cabral, 50",
+                    NomeCondominio = "Edifício Antilhas",
+                    ConteinerId = 3,
+                    Ativo = true
+                };
+            }
+            else
+            {
+                condominioModel = new CondominioModel()
+                {
+                    CondominioId = 4,
+                    Contato = "Lúcia",
+                    Endereco = "Avenida Getúlio Vargas, 1450",
+                    NomeCondominio = "Edifício Espanha",
+                    ConteinerId = 4,
+                    Ativo = true
+                };
+            }
+            return View(condominioModel);
+        }
+
+        [HttpPost]
+        public IActionResult Editar(CondominioModel condominio)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+        [HttpGet]
+        public IActionResult Detalhar(int id)
+        {
+            var condominioModel = new CondominioModel();
+            if (id == 1)
+            {
+                condominioModel = new CondominioModel()
+                {
+                    CondominioId = 1,
+                    Contato = "Antônio",
+                    Endereco = "Rua Um, 23",
+                    NomeCondominio = "Edifício Azaleia",
+                    ConteinerId = 1,
+                    Ativo = true
+                };
+            }
+            else if (id == 2)
+            {
+                condominioModel = new CondominioModel()
+                {
+                    CondominioId = 2,
+                    Contato = "Maria",
+                    Endereco = "Rua Dois, 203",
+                    NomeCondominio = "Edifício Rio de Janeiro",
+                    ConteinerId = 2,
+                    Ativo = true
+                };
+            }
+            else if (id == 3)
+            {
+                condominioModel = new CondominioModel()
+                {
+                    CondominioId = 3,
+                    Contato = "Pedro",
+                    Endereco = "Rua Pedro Álvares Cabral, 50",
+                    NomeCondominio = "Edifício Antilhas",
+                    ConteinerId = 3,
+                    Ativo = true
+                };
+            }
+            else
+            {
+                condominioModel = new CondominioModel()
+                {
+                    CondominioId = 4,
+                    Contato = "Lúcia",
+                    Endereco = "Avenida Getúlio Vargas, 1450",
+                    NomeCondominio = "Edifício Espanha",
+                    ConteinerId = 4,
+                    Ativo = true
+                };
+            }
+            return View(condominioModel);
+        }
     }
 }

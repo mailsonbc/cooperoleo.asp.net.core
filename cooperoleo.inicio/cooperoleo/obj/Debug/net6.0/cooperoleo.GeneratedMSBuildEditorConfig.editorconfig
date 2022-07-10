@@ -15,6 +15,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\mails\OneDrive\Documentos\Projetos\projetosCSharp\ADMINISTRACAO-DE-CONTEINERES-DE-OLEO-USADO\Aplicacao\projeto-cooperoleo\cooperoleo.inicio\cooperoleo
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/mails/OneDrive/Documentos/Projetos/projetosCSharp/ADMINISTRACAO-DE-CONTEINERES-DE-OLEO-USADO/Aplicacao/projeto-cooperoleo/cooperoleo.inicio/cooperoleo/Views/Condominio/Detalhar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZG9taW5pb1xEZXRhbGhhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mails/OneDrive/Documentos/Projetos/projetosCSharp/ADMINISTRACAO-DE-CONTEINERES-DE-OLEO-USADO/Aplicacao/projeto-cooperoleo/cooperoleo.inicio/cooperoleo/Views/Condominio/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZG9taW5pb1xFZGl0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/mails/OneDrive/Documentos/Projetos/projetosCSharp/ADMINISTRACAO-DE-CONTEINERES-DE-OLEO-USADO/Aplicacao/projeto-cooperoleo/cooperoleo.inicio/cooperoleo/Views/Condominio/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZG9taW5pb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
