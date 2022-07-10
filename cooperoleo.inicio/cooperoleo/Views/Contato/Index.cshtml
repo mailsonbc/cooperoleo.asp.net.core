@@ -1,0 +1,49 @@
+﻿@model IEnumerable<ContatoModel>
+@{
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Condomínios</h1>           
+
+            <p class="toolbar">
+                <a class="create btn btn-dark" asp-controller="Contato" asp-action="Inserir">Inserir Contato</a>
+            </p>
+            <table class="table table-striped" border="1" cellspacing="0" cellpadding="0">
+                <thead>
+                    <tr>
+                        <th data-field="id">Id</th>
+                        <th data-field="name">Nome</th>
+                        <th data-field="cpf">Cpf</th>
+                        <th data-field="telefone">Telefone</th>
+                        <th data-field="condominio">Condominio</th>
+                        <th data-field="endereco">Endereco</th>
+                        <th data-field="ativo">Ativo</th>
+                        <th class="actions" width="220">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var contato in Model)
+                    {
+                        <tr>
+                            <td data-field="id">@contato.ContatoId</td>
+                            <td data-field="contato">@contato.Nome</td>                            
+                            <td data-field="name">@contato.Cpf</td>
+                            <td data-field="telefone">@contato.Telefone</td>
+                            <td data-field="conteinerId">@contato.NomeCondominio</td>
+                            <td data-field="endereco">@contato.Endereco</td>
+                            <td data-field="ativo">@contato.Ativo</td>
+                            <td class="actions" width="220">
+                                <a asp-controller="Condominio" asp-action="detalhar" asp-route-id="@contato.ContatoId" class="btn btn-outline-info btn-sm">Detalhes</a>
+                                <a asp-controller="Condominio" asp-action="editar" asp-route-id="@contato.ContatoId" class="btn btn-outline-warning btn-sm">Editar</a>
+                            </td>
+                        </tr>        
+                    }
+                              
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
