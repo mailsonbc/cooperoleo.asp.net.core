@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ConteinerModel>
+
+@{
+    
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Conteinêres</h1>
+
+            <p class="toolbar">
+                <a class="create btn btn-dark" asp-action="Create">Novo Contêiner</a>
+            </p>
+
+            <table class="table table-striped" border="1" cellspacing="0" cellpadding="0">
+                <thead>
+                    <tr>
+                        <th data-field="id">ConteinerId</th>
+                        <th data-field="disponibilidade">Disponibilidade</th>
+                        <th data-field="localizacao">Localizacao</th>
+                        <th data-field="ativo">Ativo</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var conteiner in Model) 
+                    {
+                        <tr>
+                            <td data-field=id>@conteiner.ConteinerId</td>
+                            <td data-field="disponibilidade">@conteiner.Disponibilidade</td>
+                            <td data-field="localizacao">@conteiner.Localizacao</td>
+                            <td data-field="ativo">@conteiner.Ativo</td>
+                            <td class="actions" width="220">
+                                <a asp-controller="Conteiner" asp-action="detalhar" asp-route-id="@conteiner.ConteinerId" class="btn btn-outline-info btn-sm">Detalhes</a>
+                                <a asp-controller="Conteiner" asp-action="editar" asp-route-id="@conteiner.ConteinerId" class="btn btn-outline-warning btn-sm">Editar</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
