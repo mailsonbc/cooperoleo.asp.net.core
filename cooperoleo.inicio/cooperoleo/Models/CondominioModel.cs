@@ -11,11 +11,11 @@ namespace cooperoleo.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Display(Name = "Id do condomínio")]
         [HiddenInput]
-        public int CondominioId { get; set; }
+        public int? CondominioId { get; set; }
 
         [ForeignKey("ContatoId")]
         public ContatoModel? Contato { get; set; }
-        public int ContatoId { get; set; }
+        public int? ContatoId { get; set; }
 
         [Display(Name = "Endereço")]
         [MaxLength(100, ErrorMessage = "O tamanho máximo do nome é de 100 caracteres!")]
@@ -29,11 +29,11 @@ namespace cooperoleo.Models
         public String? NomeCondominio { get; set; }
 
         [Display(Name = "Id do Contêiner")]
-        public int ConteinerId { get; set; }
+        public int? ConteinerId { get; set; }
 
         [ForeignKey("ConteinerId")]
-        public ConteinerModel Conteiner { get; set; }
+        public ConteinerModel? Conteiner { get; set; }
 
-        public Boolean Ativo { get; set; }        
+        public Boolean? Ativo { get; set; }        
     }
 }

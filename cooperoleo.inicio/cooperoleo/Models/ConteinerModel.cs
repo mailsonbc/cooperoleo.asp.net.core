@@ -11,11 +11,11 @@ namespace cooperoleo.Models
         [HiddenInput]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ConteinerId { get; set; }
+        public int? ConteinerId { get; set; }
 
         [Display(Name = "Disponivel?")]
-        public Boolean Disponibilidade { get; set; }
+        public Boolean? Disponibilidade { get; set; }
 
-        public Boolean Ativo { get; set; }
+        public Boolean? Ativo { get; set; }
     }
 }

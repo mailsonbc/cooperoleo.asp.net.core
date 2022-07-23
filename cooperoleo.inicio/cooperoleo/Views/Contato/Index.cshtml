@@ -1,4 +1,4 @@
-﻿@*@model IEnumerable<ContatoModel>
+﻿@model IEnumerable<cooperoleo.Models.ContatoModel>
 @{
 }
 
@@ -16,9 +16,7 @@
                         <th data-field="id">Id</th>
                         <th data-field="name">Nome</th>
                         <th data-field="cpf">Cpf</th>
-                        <th data-field="telefone">Telefone</th>
-                        <th data-field="condominio">Condominio</th>
-                        <th data-field="endereco">Endereco</th>
+                        <th data-field="telefone">Telefone</th>                        
                         <th data-field="ativo">Ativo</th>
                         <th class="actions" width="220">Ações</th>
                     </tr>
@@ -30,9 +28,7 @@
                             <td data-field="id">@contato.ContatoId</td>
                             <td data-field="contato">@contato.Nome</td>                            
                             <td data-field="name">@contato.Cpf</td>
-                            <td data-field="telefone">@contato.Telefone</td>
-                            <td data-field="conteinerId">@contato.NomeCondominio</td>
-                            <td data-field="endereco">@contato.Endereco</td>
+                            <td data-field="telefone">@contato.Telefone</td>                            
                             <td data-field="ativo">
                                 @if(@contato.Ativo == true)
                                 {
@@ -56,4 +52,3 @@
     </div>
 </div>
 
-*@

@@ -11,7 +11,7 @@ namespace cooperoleo.Models
         [HiddenInput]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ContatoId { get; set; }
+        public int? ContatoId { get; set; }
 
         [Display(Name = "Nome do cliente")]
         [Required(ErrorMessage = "Nome do cliente é obrigatório")]
@@ -26,7 +26,6 @@ namespace cooperoleo.Models
         [Display(Name = "Telefone")]
         [MaxLength(15)]
         public String? Telefone { get; set; }
-
-        public Boolean Ativo { get; set; }
+        public Boolean? Ativo { get; set; }
     }
 }

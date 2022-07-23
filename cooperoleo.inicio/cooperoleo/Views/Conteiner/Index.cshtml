@@ -1,4 +1,4 @@
-﻿@*@model IEnumerable<ConteinerModel>
+﻿@model IEnumerable<cooperoleo.Models.ConteinerModel>
 
 @{
     
@@ -18,8 +18,7 @@
                 <thead>
                     <tr>
                         <th data-field="id">ConteinerId</th>
-                        <th data-field="disponibilidade">Disponibilidade</th>
-                        <th data-field="localizacao">Localizacao</th>
+                        <th data-field="disponibilidade">Disponibilidade</th>                   
                         <th data-field="ativo">Ativo</th>
                         <th></th>
                     </tr>
@@ -29,8 +28,16 @@
                     {
                         <tr>
                             <td data-field=id>@conteiner.ConteinerId</td>
-                            <td data-field="disponibilidade">@conteiner.Disponibilidade</td>
-                            <td data-field="localizacao">@conteiner.Localizacao</td>
+                            <td data-field="disponibilidade">
+                                @if(@conteiner.Disponibilidade == true)
+                                {
+                                    <p>Não alocado</p>
+                                }
+                                else
+                                {
+                                    <p>Alocado</p>
+                                }
+                            </td>                            
                             <td data-field="ativo">
                                 @if(@conteiner.Ativo == true)
                                 {
@@ -52,4 +59,3 @@
         </div>
     </div>
 </div>
-*@
