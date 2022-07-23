@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using cooperoleo.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace cooperoleo.Contexto
 {
@@ -13,5 +14,11 @@ namespace cooperoleo.Contexto
         {
 
         }
+
+        public DbSet<CondominioModel> Condominios { get; set; }
+
+        public DbSet<ContatoModel> Contatos { get; set; }
+
+        public DbSet<ConteinerModel> Conteiners { get; set; }
     }
 }

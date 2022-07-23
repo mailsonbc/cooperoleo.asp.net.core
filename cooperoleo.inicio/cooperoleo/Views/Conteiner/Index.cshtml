@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ConteinerModel>
+﻿@*@model IEnumerable<ConteinerModel>
 
 @{
     
@@ -31,7 +31,16 @@
                             <td data-field=id>@conteiner.ConteinerId</td>
                             <td data-field="disponibilidade">@conteiner.Disponibilidade</td>
                             <td data-field="localizacao">@conteiner.Localizacao</td>
-                            <td data-field="ativo">@conteiner.Ativo</td>
+                            <td data-field="ativo">
+                                @if(@conteiner.Ativo == true)
+                                {
+                                    <p>Sim</p>
+                                }
+                                else
+                                {
+                                    <p>Não</p>
+                                }
+                            </td>
                             <td class="actions" width="220">
                                 <a asp-controller="Conteiner" asp-action="detalhar" asp-route-id="@conteiner.ConteinerId" class="btn btn-outline-info btn-sm">Detalhes</a>
                                 <a asp-controller="Conteiner" asp-action="editar" asp-route-id="@conteiner.ConteinerId" class="btn btn-outline-warning btn-sm">Editar</a>
@@ -43,3 +52,4 @@
         </div>
     </div>
 </div>
+*@

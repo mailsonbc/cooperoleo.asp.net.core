@@ -1,4 +1,4 @@
-﻿@model IEnumerable<CondominioModel>
+﻿@*@model IEnumerable<CondominioModel>
 
 @{
 }
@@ -32,7 +32,16 @@
                             <td data-field="name">@condominio.NomeCondominio</td>
                             <td data-field="endereco">@condominio.Endereco</td>
                             <td data-field="conteinerId">@condominio.ConteinerId</td>
-                            <td data-field="ativo">@condominio.Ativo</td>
+                            <td data-field="ativo">
+                                @if(@condominio.Ativo == true)
+                                {
+                                    <p>Sim</p>
+                                }
+                                else
+                                {
+                                    <p>Não</p>
+                                }
+                            </td>
                             <td class="actions" width="220">
                                 <a asp-controller="Condominio" asp-action="detalhar" asp-route-id="@condominio.CondominioId" class="btn btn-outline-info btn-sm">Detalhes</a>
                                 <a asp-controller="Condominio" asp-action="editar" asp-route-id="@condominio.CondominioId" class="btn btn-outline-warning btn-sm">Editar</a>
@@ -45,3 +54,4 @@
         </div>
     </div>
 </div>
+*@

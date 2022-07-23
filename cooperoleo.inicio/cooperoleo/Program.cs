@@ -1,7 +1,13 @@
+using cooperoleo.Contexto;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+var connection = builder.Configuration.GetConnectionString("databaseString");
+builder.Services.AddDbContext<CooperContext>(options => options.UseSqlServer(connection).EnableSensitiveDataLogging(true));
 
 var app = builder.Build();
 
